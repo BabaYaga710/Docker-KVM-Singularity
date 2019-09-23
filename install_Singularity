@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# VERSION=2.5.2
+
+sudo wget https://github.com/singularityware/singularity/releases/download/$VERSION/singularity-$VERSION.tar.gz
+sudo tar xvf singularity-$VERSION.tar.gz
+cd singularity-$VERSION
+sudo ./configure --prefix=/usr/local
+sudo make
+sudo make install
