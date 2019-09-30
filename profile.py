@@ -36,10 +36,10 @@ node.routable_control_ip = "true"
  
 node.disk_image = "urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"
   
-iface = node.addInterface
-iface.component_id = "eth1"
-iface.addAddress(pg.IPv4Address(prefixForIP, "255.255.255.0"))
-link.addInterface(iface)
+#iface = node.addInterface
+#iface.component_id = "eth1"
+#iface.addAddress(pg.IPv4Address(prefixForIP, "255.255.255.0"))
+#link.addInterface(iface)
   
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/passwordless.sh"))
 node.addService(pg.Execute(shell="sh", command="sudo bash /local/repository/install_docker.sh"))
